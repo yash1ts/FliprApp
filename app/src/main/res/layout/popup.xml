@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:paddingTop="16dp"
+        android:background="@color/defaultText"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:id="@+id/lay3"
+        android:text="NSE"/>
+    <RelativeLayout
+        android:background="@color/defaultText"
+        android:layout_width="match_parent"
+        android:paddingTop="4dp"
+        android:paddingStart="16dp"
+        android:paddingBottom="16dp"
+        android:paddingEnd="16dp"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lay1"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Nifty 50"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay1"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/textSize20"
+        android:id="@+id/pop_up_data"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lay2"
+        android:textColor="@color/gray"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:text="Prev close"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lay2"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/prev_close"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_below="@id/pop_up_data"
+        android:background="@drawable/curved_bg"/>
+</LinearLayout>

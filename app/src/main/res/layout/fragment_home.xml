@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <LinearLayout
+      android:id="@+id/lay1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:minHeight="76dp"
+      android:orientation="vertical"
+      android:padding="12dp"
+      android:background="@color/gray"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_stock" />
+
+    <TextView
+        android:id="@+id/stock_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:paddingStart="8dp"
+        android:textStyle="bold"
+        android:text="@{viewModel.dataModel.open}" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      android:orientation="horizontal">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/textSize12"
+          android:textColor="@color/red"
+          android:paddingStart="8dp"
+          android:layout_alignParentStart="true"
+          android:layout_alignParentTop="true"
+          android:text="4333.15(-1.13%)"/>
+      <TextView
+          android:id="@+id/date"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentTop="true"
+          android:textSize="10sp"
+          android:text="14 Aug, 2020 16:01"
+          android:alpha="0.8"
+          />
+    </RelativeLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/linearLayout2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/lay1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Overview"
+        android:textStyle="bold" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+      android:background="@color/defaultText"/>
+
+  </LinearLayout>
+
+  <include
+      layout="@layout/home_content"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:id="@+id/lay_include"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
